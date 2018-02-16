@@ -14,7 +14,7 @@ class CreateYearlevelsTable extends Migration
     public function up()
     {
         Schema::create('yearlevels', function (Blueprint $table) {
-            $table->increments('level_id');
+            $table->increments('level_id',true);
             $table->string('level',100);
             $table->string('description',100)->nullable();
             $table->integer('program_id')->unsigned();
